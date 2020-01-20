@@ -1,0 +1,6 @@
+1) I did know about Git, GitHub. I've heard about Markdown, but i've did not knew about GitHub Pages
+2) Yes we have created some websites before in previous courses. But we merely scraped the surface, so
+this is new territory for me.
+3) In our project course (Software Engineering 2) we created a website for our smarthouse. But this is the only time I've done a whole website
+We have created some minor websites when we learnd about restfulAPI, but in that course the focus was on creating restfulAPIs and not websites.
+4) Today I learned about GitHub pages which was really cool. I also learned some basics html which is always nice.  
