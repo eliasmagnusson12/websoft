@@ -1,17 +1,27 @@
 (function () {
     'use strict';
 
+            var perrow = 3;
+            html = "<table><tr>";
+
+
 //    fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081')
     fetch('data/1081.json')
         .then((response) => {
             return response.json();
         })
         .then((myJson) => {
-            console.log(myJson);
+            for(var i = 0; i<myJson.length;i++){
+                html += "<td>" + myJson[i] + "</td>";
+                var next = i+1;
+    if (next%perrow==0 && next!=data.length) {
+      html += "</tr><tr>";
+    }
+            }
         });  
 
-        var arr = [myJson]
-
+        
+        document.getElementById("container").innerHTML = html;
         
         console.log(arr.length)
         
