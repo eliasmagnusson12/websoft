@@ -15,19 +15,7 @@
 
 
         
-        // 1. Create the button
-        var button = document.createElement("button");
-        button.innerHTML = "Fetch Schools";
-
-        // 2. Append somewhere
-        var body = document.getElementsByTagName("body")[0];
-        body.appendChild(button);
-
-        // 3. Add event handler
-        button.addEventListener ("click", function() {
-            
-        alert("did something");
-        });
+        
 
         function generateTable(data) {
             var html = '';
@@ -66,6 +54,21 @@
         
             return html;
         }
+
+
+        // 1. Create the button
+        var button = document.createElement("button");
+        button.innerHTML = "Fetch Schools";
+
+        // 2. Append somewhere
+        var body = document.getElementsByTagName("body")[0];
+        body.appendChild(button);
+
+        // 3. Add event handler
+        button.addEventListener ("click", function() {
+            document.getElementById("container").innerHTML = html;
+        alert("did something");
+        });
 
       
 
