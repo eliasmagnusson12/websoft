@@ -38,51 +38,36 @@
 
         // 3. Add event handler
         button.addEventListener ("click", function() {
-            document.getElementById("container").innerHTML = generateTable(myList);
-        alert("did something");
+            document.getElementById("container").appendChild(generateTable(myList)); 
+        //alert("did something");
         });
 
 
         function generateTable(data) {
-            var html = '';
-        
-            if (typeof (data[0]) === 'undefined') {
-                console.log("und")
-                return null;
+            
+                        // DRAW HTML TABLE
+            var perrow = 3, // 3 items per row
+            count = 0, // Flag for current cell
+            table = document.createElement("table"),
+            row = table.insertRow();
+
+            for (var i of data) {
+            var cell = row.insertCell();
+            cell.innerHTML = i;
+
+            // You can also attach a click listener if you want
+            cell.addEventListener("click", function(){
+            alert("FOO!");
+            });
+
+            // Break into next row
+            count++;
+            if (count%perrow==0) {
+            row = table.insertRow();
+            }
             }
         
-            if (data[0].constructor === String) {
-                console.log("String")
-                html += '<tr>\r\n';
-                for (var item in data) {
-                    html += '<td>' + data[item] + '</td>\r\n';
-                }
-                html += '</tr>\r\n';
-            }
-        
-            if (data[0].constructor === Array) {
-                console.log("arr")
-                for (var row in data) {
-                    html += '<tr>\r\n';
-                    for (var item in data[row]) {
-                        html += '<td>' + data[row][item] + '</td>\r\n';
-                    }
-                    html += '</tr>\r\n';
-                }
-            }
-        
-            if (data[0].constructor === Object) {
-                console.log("obj")
-                for (var row in data) {
-                    html += '<tr>\r\n';
-                    for (var item in data[row]) {
-                        html += '<td>' + item + ':' + data[row][item] + '</td>\r\n';
-                    }
-                    html += '</tr>\r\n';
-                }
-            }
-        
-            return html;
+            return table;
         }
       
 
