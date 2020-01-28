@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-           var html = ""; 
+    var arr = []; 
+    var myList = [];
 
 
 //    fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081')
@@ -11,38 +12,14 @@
         })
         .then((myJson) => {
             console.log(myJson);
-
-         generateTable(myJson);
+            
+            myList[{"name": myJson[0].getElementsByTagName("Skolenhetsnamn")}]
+            
+            console.log(myList)
         });  
 
 
         
-        
-
-        function generateTable(data) {
-      var perrow = 3, // 3 items per row
-      count = 0, // Flag for current cell
-      table = document.createElement("table"),
-      row = table.insertRow();
-
-      for (var i of data) {
-        var cell = row.insertCell();
-        cell.innerHTML = i;
-
-        // You can also attach a click listener if you want
-    cell.addEventListener("click", function(){
-        alert("FOO!");
-      });
-
-      count++;
-      if (count%perrow==0) {
-        row = table.insertRow();
-      }
-    }
-  
-    document.getElementById("container").appendChild(table);
-        }
-
 
         // 1. Create the button
         var button = document.createElement("button");
@@ -61,6 +38,6 @@
       
 
         
-        console.log('newer');   
+        console.log('newest');   
     console.log('Sandbox MEGA is ready!');
 })();
