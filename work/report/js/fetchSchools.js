@@ -2,7 +2,7 @@
     'use strict';
 
             var perrow = 3;
-            html = "<table><tr>";
+            html = "";
 
 
 //    fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081')
@@ -15,7 +15,7 @@
                 html += "<td>" + myJson[i] + "</td>";
                 var next = i+1;
     if (next%perrow==0 && next!=data.length) {
-      html += "";
+      html += "</tr><tr>";
     }
             }
         });  
