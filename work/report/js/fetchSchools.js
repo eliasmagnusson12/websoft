@@ -13,7 +13,9 @@
         .then((myJson) => {
             console.log(myJson);
             
-            myList = [ myJson.getElementsByTagName("Skolenhetsnamn")]
+            console.log(myJson.Skolenheter.length)
+            
+            //myList = [ myJson.getElementsByTagName("Skolenhetsnamn")]
                         
             
             
@@ -41,6 +43,6 @@
       
 
         
-        console.log('newesterrerer');   
+        console.log('new');   
     console.log('Sandbox MEGA is ready!');
 })();
