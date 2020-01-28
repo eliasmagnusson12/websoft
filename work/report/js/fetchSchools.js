@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var arr = []; 
+    
     var myList = [];
 
 
@@ -15,17 +15,14 @@
             
             console.log(myJson.Skolenheter.length)
             
-
-            
-            
-                        
-            for(var i=0; i < myJson.Skolenheter.length; i++)
+            for(var i=0; i < myJson.Skolenheter.length; i++){
 
             var item = myJson.Skolenheter[i].Skolenhetsnamn;
             console.log(item)
-
             myList[i] = item;
-            
+            }
+
+            generateTable(myList)
         });  
 
 
@@ -45,6 +42,48 @@
         alert("did something");
         });
 
+
+        function generateTable(data) {
+            var html = '';
+        
+            if (typeof (data[0]) === 'undefined') {
+                console.log("und")
+                return null;
+            }
+        
+            if (data[0].constructor === String) {
+                console.log("String")
+                html += '<tr>\r\n';
+                for (var item in data) {
+                    html += '<td>' + data[item] + '</td>\r\n';
+                }
+                html += '</tr>\r\n';
+            }
+        
+            if (data[0].constructor === Array) {
+                console.log("arr")
+                for (var row in data) {
+                    html += '<tr>\r\n';
+                    for (var item in data[row]) {
+                        html += '<td>' + data[row][item] + '</td>\r\n';
+                    }
+                    html += '</tr>\r\n';
+                }
+            }
+        
+            if (data[0].constructor === Object) {
+                console.log("obj")
+                for (var row in data) {
+                    html += '<tr>\r\n';
+                    for (var item in data[row]) {
+                        html += '<td>' + item + ':' + data[row][item] + '</td>\r\n';
+                    }
+                    html += '</tr>\r\n';
+                }
+            }
+        
+            return html;
+        }
       
 
         
