@@ -13,7 +13,7 @@
         .then((myJson) => {
             console.log(myJson);
             
-            myList[{"name": myJson[0].getElementsByTagName("Skolenhetsnamn")}]
+            myList = [ myJson.getElementsByTagName("Skolenheter")]
 
             
             
