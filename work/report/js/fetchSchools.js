@@ -14,10 +14,12 @@
             console.log(myJson);
             
             console.log(myJson.Skolenheter.length)
+
+        
             
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
-            var item = myJson.Skolenheter[i].Skolenhetsnamn;
+            var item = myJson.Skolenheter[i];
             console.log(item)
             myList[i] = item;
             }
@@ -46,7 +48,7 @@
         function generateTable(data) {
             
                         // DRAW HTML TABLE
-            var perrow = 3, // 3 items per row
+            var perrow = 4, // 3 items per row
             count = 0, // Flag for current cell
             table = document.createElement("table"),
             row = table.insertRow();
