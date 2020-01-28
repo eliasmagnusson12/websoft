@@ -19,15 +19,16 @@
             
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
-            var item = myJson.Skolenheter[i].Skolenhetsnamn;
-            var itemSpec1 = item.Skolenhetskod;
-            var itemSpec2 = item.Skolenhetsnamn;
-            var itemSpec3 = item.Kommunkod;
-            var itemSpec4 = item.PeOrgNr;
-            myList[i] = itemSpec1;
-            myList[i+1] = itemSpec2;
-            myList[i+2] = itemSpec3;
-            myList[i+3] = itemSpec4;
+            var item = myJson.Skolenheter[i];
+            var lCount = 0;
+        
+            for (var a = 0; a < Object.value(item).length; a++) {
+
+                myList[lCount] = item[a];
+                lCount++;
+              }
+            
+            
             }
 
             
