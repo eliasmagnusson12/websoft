@@ -22,7 +22,7 @@
             myList[i] = item;
             }
 
-            generateTable(myList)
+            
         });  
 
 
@@ -38,7 +38,7 @@
 
         // 3. Add event handler
         button.addEventListener ("click", function() {
-            document.getElementById("container").innerHTML = html;
+            document.getElementById("container").innerHTML = generateTable(myList);
         alert("did something");
         });
 
