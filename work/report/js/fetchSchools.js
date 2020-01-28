@@ -14,7 +14,10 @@
             console.log(myJson);
             
             myList[{"name": myJson[0].getElementsByTagName("Skolenhetsnamn")}]
+
             
+            
+            console.log(Object.keys(myJson).length)
             console.log(myList)
         });  
 
