@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-            
+           var html = ""; 
 
 
 //    fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081')
@@ -10,7 +10,7 @@
             return response.json();
         })
         .then((myJson) => {
-           generateTable(myJson);
+          html = generateTable(myJson);
         });  
 
 
