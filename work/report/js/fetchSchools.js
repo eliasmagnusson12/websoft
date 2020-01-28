@@ -21,12 +21,14 @@
             var html = '';
         
             if (typeof (data[0]) === 'undefined') {
+                console.log('und'); 
                 return null;
             }
         
             if (data[0].constructor === String) {
                 html += '<tr>\r\n';
                 for (var item in data) {
+                    console.log('String'); 
                     html += '<td>' + data[item] + '</td>\r\n';
                 }
                 html += '</tr>\r\n';
@@ -34,6 +36,7 @@
         
             if (data[0].constructor === Array) {
                 for (var row in data) {
+                    console.log('Arr'); 
                     html += '<tr>\r\n';
                     for (var item in data[row]) {
                         html += '<td>' + data[row][item] + '</td>\r\n';
@@ -44,6 +47,7 @@
         
             if (data[0].constructor === Object) {
                 for (var row in data) {
+                    console.log('OBJ'); 
                     html += '<tr>\r\n';
                     for (var item in data[row]) {
                         html += '<td>' + item + ':' + data[row][item] + '</td>\r\n';
