@@ -10,7 +10,9 @@
             return response.json();
         })
         .then((myJson) => {
-          html = generateTable(myJson);
+            console.log(myJson);
+
+         generateTable(myJson);
         });  
 
 
@@ -18,45 +20,27 @@
         
 
         function generateTable(data) {
-            var html = '';
-        
-            if (typeof (data[0]) === 'undefined') {
-                console.log('und'); 
-                return null;
-            }
-        
-            if (data[0].constructor === String) {
-                html += '<tr>\r\n';
-                for (var item in data) {
-                    console.log('String'); 
-                    html += '<td>' + data[item] + '</td>\r\n';
-                }
-                html += '</tr>\r\n';
-            }
-        
-            if (data[0].constructor === Array) {
-                for (var row in data) {
-                    console.log('Arr'); 
-                    html += '<tr>\r\n';
-                    for (var item in data[row]) {
-                        html += '<td>' + data[row][item] + '</td>\r\n';
-                    }
-                    html += '</tr>\r\n';
-                }
-            }
-        
-            if (data[0].constructor === Object) {
-                for (var row in data) {
-                    console.log('OBJ'); 
-                    html += '<tr>\r\n';
-                    for (var item in data[row]) {
-                        html += '<td>' + item + ':' + data[row][item] + '</td>\r\n';
-                    }
-                    html += '</tr>\r\n';
-                }
-            }
-        
-            return html;
+      var perrow = 3, // 3 items per row
+      count = 0, // Flag for current cell
+      table = document.createElement("table"),
+      row = table.insertRow();
+
+      for (var i of data) {
+        var cell = row.insertCell();
+        cell.innerHTML = i;
+
+        // You can also attach a click listener if you want
+    cell.addEventListener("click", function(){
+        alert("FOO!");
+      });
+
+      count++;
+      if (count%perrow==0) {
+        row = table.insertRow();
+      }
+    }
+  
+    document.getElementById("container").appendChild(table);
         }
 
 
@@ -77,6 +61,6 @@
       
 
         
-        console.log('new');   
+        console.log('newer');   
     console.log('Sandbox MEGA is ready!');
 })();
