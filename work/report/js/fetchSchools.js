@@ -15,7 +15,7 @@
                 html += "<td>" + myJson[i] + "</td>";
                 var next = i+1;
     if (next%perrow==0 && next!=data.length) {
-      html += "</tr><tr>";
+      html += "";
     }
             }
         });  
