@@ -20,9 +20,9 @@
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
             var item = myJson.Skolenheter[i];
-            var lCount = 0;
-        
-            for (var a = 0; a < Object.value(item).length; a++) {
+            var lCount;
+                
+            for (var a = 0; a < 3; a++) {
 
                 myList[lCount] = item[a];
                 lCount++;
