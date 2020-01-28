@@ -15,12 +15,17 @@
             
             console.log(myJson.Skolenheter.length)
             
-            //myList = [ myJson.getElementsByTagName("Skolenhetsnamn")]
+
+            
+            
                         
+            for(var i=0; i < myJson.Skolenheter.length; i++)
+
+            var item = myJson.Skolenheter[i].Skolenhetsnamn;
+            console.log(item)
+
+            myList[i] = item;
             
-            
-            console.log(Object.keys(myJson).length)
-            console.log(myList)
         });  
 
 
