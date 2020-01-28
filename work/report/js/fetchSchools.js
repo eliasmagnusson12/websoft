@@ -73,6 +73,6 @@
       
 
         
-
+        console.log('new');   
     console.log('Sandbox MEGA is ready!');
 })();
