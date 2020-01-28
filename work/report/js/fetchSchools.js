@@ -10,7 +10,10 @@
             console.log(myJson);
         });  
 
+        var arr = [myJson]
+
         
+        console.log(arr.length)
         
         // 1. Create the button
         var button = document.createElement("button");
