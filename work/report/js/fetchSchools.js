@@ -13,10 +13,7 @@
            generateTable(myJson);
         });  
 
-        
-        document.getElementById("container").innerHTML = html;
-        
-        console.log(arr.length)
+
         
         // 1. Create the button
         var button = document.createElement("button");
