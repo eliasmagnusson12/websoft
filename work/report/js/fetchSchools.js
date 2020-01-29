@@ -16,7 +16,10 @@
             console.log(myJson.Skolenheter.length)
 
         
-            
+            myList.push("Skolenhetsnamn".bold)
+            myList.push("Skolenhetsnamn".bold)
+            myList.push("Kommunkod".bold)
+            myList.push("PeOrgNr".bold)
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
             var item = myJson.Skolenheter[i];
@@ -64,7 +67,7 @@
             count = 0, // Flag for current cell
             table = document.createElement("table"),
             row = table.insertRow();
-            table.tHead = "Elias"
+            
             for (var i of data) {
             var cell = row.insertCell();
             cell.innerHTML = i;
