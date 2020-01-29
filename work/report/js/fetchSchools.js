@@ -14,12 +14,26 @@
             console.log(myJson);
             
             console.log(myJson.Skolenheter.length)
+            
+            var str1 = "Skolenhetsnamn";
+            var str2 = "Skolenhetsnamn";
+            var str3 = "Kommunkod";
+            var str4 = "PeOrgNr";
 
+            document.write(str1.fontcolor( "blue" ));
+            document.write(str2.fontcolor( "blue" ));
+            document.write(str3.fontcolor( "blue" ));
+            document.write(str4.fontcolor( "blue" ));
+
+            str1 = str1.bold;
+            str2 = str2.bold;
+            str3 = str3.bold;
+            str4 = str4.bold;
         
-            myList.push("Skolenhetsnamn".bold)
-            myList.push("Skolenhetsnamn".bold)
-            myList.push("Kommunkod".bold)
-            myList.push("PeOrgNr".bold)
+            myList.push(str1)
+            myList.push(str2)
+            myList.push(str3)
+            myList.push(str4)
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
             var item = myJson.Skolenheter[i];
