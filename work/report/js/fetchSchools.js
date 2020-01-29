@@ -20,11 +20,6 @@
             var str3 = "Kommunkod";
             var str4 = "PeOrgNr";
 
-            document.write(str1.fontcolor( "blue" ));
-            document.write(str2.fontcolor( "blue" ));
-            document.write(str3.fontcolor( "blue" ));
-            document.write(str4.fontcolor( "blue" ));
-
             str1 = str1.bold;
             str2 = str2.bold;
             str3 = str3.bold;
