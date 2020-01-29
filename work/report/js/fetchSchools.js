@@ -64,7 +64,7 @@
             count = 0, // Flag for current cell
             table = document.createElement("table"),
             row = table.insertRow();
-
+            table.tHead = "Elias"
             for (var i of data) {
             var cell = row.insertCell();
             cell.innerHTML = i;
