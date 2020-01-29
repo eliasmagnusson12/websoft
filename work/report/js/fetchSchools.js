@@ -21,12 +21,9 @@
 
             var item = myJson.Skolenheter[i];
             
+             myList.push(Object.values(item))
                 
-            for (var a = 0; a < 3; a++) {
-
-                myList.push({value: item[a]})
-                
-            }
+            
             
             
             }
