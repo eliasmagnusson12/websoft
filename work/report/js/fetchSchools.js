@@ -23,7 +23,13 @@
             
 
             const {Skolenhetskod} = item;
+            const {Skolenhetsnamn} = item;
+            const {Kommunkod} = item;
+            const {PeOrgNr} = item;
              myList.push(Skolenhetskod)
+             myList.push(Skolenhetsnamn)
+             myList.push(Kommunkod)
+             myList.push(PeOrgNr)
                 
             
             
