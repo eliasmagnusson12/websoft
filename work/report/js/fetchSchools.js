@@ -20,10 +20,10 @@
             var str3 = "Kommunkod";
             var str4 = "PeOrgNr";
 
-            str1 = str1.bold;
-            str2 = str2.bold;
-            str3 = str3.bold;
-            str4 = str4.bold;
+            str1 = str1.bold();
+            str2 = str2.bold();
+            str3 = str3.bold();
+            str4 = str4.bold();
         
             myList.push(str1)
             myList.push(str2)
