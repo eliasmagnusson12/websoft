@@ -16,11 +16,11 @@
             console.log(myJson.Skolenheter.length)
 
         
-            
+            var lCount = 0;
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
             var item = myJson.Skolenheter[i];
-            var lCount;
+            
                 
             for (var a = 0; a < 3; a++) {
 
