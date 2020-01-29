@@ -21,7 +21,9 @@
 
             var item = myJson.Skolenheter[i];
             
-             myList.push(Object.values(item))
+
+            const {Skolenhetskod} = item;
+             myList.push(Skolenhetskod)
                 
             
             
