@@ -16,7 +16,7 @@
             console.log(myJson.Skolenheter.length)
 
         
-            var lCount = 0;
+            
             for(var i=0; i < myJson.Skolenheter.length; i++){
 
             var item = myJson.Skolenheter[i];
@@ -24,9 +24,9 @@
                 
             for (var a = 0; a < 3; a++) {
 
-                myList[lCount] = item[a];
-                lCount++;
-              }
+                myList.push({value: item[a]})
+                
+            }
             
             
             }
@@ -55,7 +55,7 @@
         function generateTable(data) {
             
                         // DRAW HTML TABLE
-            var perrow = 4, // 3 items per row
+            var perrow = 4, // 4 items per row
             count = 0, // Flag for current cell
             table = document.createElement("table"),
             row = table.insertRow();
