@@ -72,7 +72,7 @@ function jumpto(x){
             document.getElementById("container").appendChild(generateTable(myList)); 
         }else{
 
-            document.getElementById("container") = "";
+            document.getElementById("container").innerHTML = "";
             document.getElementById("container").appendChild(generateTable(myList)); 
 
         }
