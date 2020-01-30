@@ -39,19 +39,19 @@
     });
 
     flagLinkElf.addEventListener("click", function () {
-        flagTarget.style.visibility = 'visible';
+        flagTarget.classList.toggle("m-fadeIn")
         drawFlagElfenbenskusten();
         
     });
 
     flagLinkFrance.addEventListener("click", function () {
-        flagTarget.style.visibility = 'visible';
+        flagTarget.classList.toggle("m-fadeIn")
         drawFlagFrance();
         
     });
 
     flagLinkBelg.addEventListener("click", function () {
-        flagTarget.style.visibility = 'visible';
+        flagTarget.classList.toggle("m-fadeIn")
         drawFlagBelg();
         
     });

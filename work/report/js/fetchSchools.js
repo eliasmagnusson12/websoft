@@ -1,8 +1,11 @@
 
 function jumpto(x){
     
-    if (document.form2.jumpmenu.value != "null") {
+    if (myList < 1) {
         document.location.href = x
+        }else{
+                myList.splice(0, arr.length)
+
         }
     }
 
