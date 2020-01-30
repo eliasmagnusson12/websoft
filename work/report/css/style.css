@@ -89,5 +89,27 @@ body {
   background-color: #ED2939;
 }
 
+.belg {
+  background-color: #f8de1f;
+}
+
+.france .part1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  background-color: #333;
+}
+
+.france .part2 {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 100px;
+  height: 200px;
+  background-color: #ED2939;
+}
+
 
 
