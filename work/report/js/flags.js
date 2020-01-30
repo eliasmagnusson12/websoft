@@ -10,7 +10,7 @@
     //myContent.innerHTML = '<h3>This is a MEGA template!</h3>';
 
     function drawFlagElfenbenskusten()  {
-        var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +
+        var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="m-fadeIn"></div><div class="part1"></div>' +
         '<div class="part2"></div></div>';
 
         console.log("Drawing flag");
