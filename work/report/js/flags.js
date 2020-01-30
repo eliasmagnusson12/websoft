@@ -33,7 +33,10 @@
         flagTarget.innerHTML = flagBelg;
     }
 
-
+    flagTarget.addEventListener("click", function (){
+        flagTarget.style.visibility='hidden'
+        console.log("Hello")
+    });
 
     flagLinkElf.addEventListener("click", function () {
         
