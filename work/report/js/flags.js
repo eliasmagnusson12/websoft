@@ -4,7 +4,7 @@
     //var myContent = document.getElementById('content');
     var flagTarget = document.getElementById('flag');
     var flagLinkElf = document.getElementById('draw-elfenbenskusten');
-    var flagLinkMalay = document.getElementById('draw-malay');
+    var flagLinkFrance = document.getElementById('draw-france');
 
     //myContent.innerHTML = '<h3>This is a MEGA template!</h3>';
 
@@ -16,12 +16,12 @@
         flagTarget.innerHTML = flagElfenbenskusten;
     }
 
-    function drawFlagMalay()  {
-        var flagElfenbenskusten = '<div class="flag malay"><div class="top-left"></div>' +
-        '<div class="bottom"></div><div class= "top-right"></div></div>';
+    function drawFlagFrance()  {
+        var flagFrance = '<div class="flag france"><div class="part1"></div>' +
+        '<div class="part2"></div></div>';
 
         console.log("Drawing flag");
-        flagTarget.innerHTML = flagElfenbenskusten;
+        flagTarget.innerHTML = flagFrance;
     }
 
 
@@ -31,9 +31,9 @@
         drawFlagElfenbenskusten();
     });
 
-    flagLinkMalay.addEventListener("click", function () {
+    flagLinkFrance.addEventListener("click", function () {
         console.log("Event for clicking link elfenbenskusten.");
-        drawFlagMalay();
+        drawFlagFrance();
     });
 
 
