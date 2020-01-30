@@ -5,7 +5,7 @@
     var myList = [];
 
 
-fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282')
+//fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282')
     fetch('data/1081.json')
         .then((response) => {
             return response.json();
@@ -52,7 +52,7 @@ fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282')
         });  
 
         
-        var button1 = getElementById('dropbtn');
+        var button1 = getElementsByTagName("dropbtn");
         button1.innerHTML = "Select School";
 
         var body = document.getElementsByTagName("body")
