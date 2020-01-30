@@ -39,17 +39,17 @@
     });
 
     flagLinkElf.addEventListener("click", function () {
-        
+        flagTarget.style.visibility='visible'
         drawFlagElfenbenskusten();
     });
 
     flagLinkFrance.addEventListener("click", function () {
-        
+        flagTarget.style.visibility='visible'
         drawFlagFrance();
     });
 
     flagLinkBelg.addEventListener("click", function () {
-        
+        flagTarget.style.visibility='visible'
         drawFlagBelg();
     });
 
