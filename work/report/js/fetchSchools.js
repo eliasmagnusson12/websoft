@@ -49,37 +49,8 @@
             }
 
             
-        });  
+        }); 
 
-        
-        var button1 = document.getElementById("dropbtn");
-        
-        button1.addEventListener ("click", function() {
-            myFunction();
-        
-        });
-        
-        
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-        
 
         // 1. Create the button
         var button = document.createElement("button");

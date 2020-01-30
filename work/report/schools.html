@@ -33,12 +33,20 @@
     <p>Lets fetch some Schools!</p>
 </div>
 
-<div class="dropdown">
-    <div id="myDropdown" class="dropdown-content">
-      <a href="#">Landskrona</a>
-      <a href="#">Kristianstad</a>
-      <a href="#">Lund</a>
-    </div>
+<div class="container">
+    <h2>Select School</h2>
+    <p>Choose between <strong>three</strong> different municipality</p>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Landskrona</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lund</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kristianstad</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>    
+      </ul>
+    </div><br>
   </div>
 
 <div id="container"></div>
