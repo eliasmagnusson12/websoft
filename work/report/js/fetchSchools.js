@@ -33,7 +33,6 @@
 
             var item = myJson.Skolenheter[i];
             
-
             const {Skolenhetskod} = item;
             const {Skolenhetsnamn} = item;
             const {Kommunkod} = item;
@@ -43,13 +42,8 @@
              myList.push(Kommunkod)
              myList.push(PeOrgNr)
                 
-            
-            
-            
             }
-
-            
-        }); 
+         }); 
 
 
         // 1. Create the button

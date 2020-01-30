@@ -33,21 +33,27 @@
     <p>Lets fetch some Schools!</p>
 </div>
 
-<div class="container">
-    <h2>Select School</h2>
-    <p>Choose between <strong>three</strong> different municipality</p>
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Dropdown Example
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Landskrona</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lund</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kristianstad</a></li>
-        <li role="presentation" class="divider"></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>    
-      </ul>
-    </div><br>
-  </div>
+<script language="javascript">
+    function jumpto(x){
+    
+    if (document.form2.jumpmenu.value != "null") {
+        document.location.href = x
+        }
+    }
+    </script>
+
+<form name="form2">
+    <select name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
+    <option>Jump to...</option>
+    <option value=https://www.quackit.com>Quackit Homepage</option>
+    <option value=https://www.quackit.com/javascript/>JavaScript</option>
+    <option value=https://www.quackit.com/html/>HTML</option>
+    <option value=https://www.quackit.com/css/>CSS</option>
+    <option value=https://www.quackit.com/sql/tutorial/>SQL</option>
+    <option value=https://www.quackit.com/database/tutorial/>Database Tutorial</option>
+    <option value=https://www.quackit.com/web_hosting/>Web Hosting Tutorial</option>
+    </select>
+    </form>
 
 <div id="container"></div>
 <script type="text/javascript" src="js/fetchSchools.js"></script> 
