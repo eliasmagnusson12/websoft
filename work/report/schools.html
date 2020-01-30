@@ -2,7 +2,7 @@
 <html lang="en">
 
     
-
+    <script type="text/javascript" src="js/fetchSchools.js"></script> 
 
 <head>
     <meta charset="utf-8">
@@ -34,8 +34,7 @@
 </div>
 
     
-    
-    
+
 
 <form name="form2">
     <select name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
@@ -50,8 +49,12 @@
     </select>
     </form>
 
+    
+
+
+
 <div id="container"></div>
-<script type="text/javascript" src="js/fetchSchools.js"></script>  
+<script type="text/javascript" src="js/fetchSchools.js">jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value);</script> 
 <div id="duck" class="duck"></div>
 <script type="text/javascript" src="js/duck.js"></script> 
 
