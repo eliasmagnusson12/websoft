@@ -53,7 +53,7 @@
 
         
         var button1 = document.getElementById("dropbtn");
-        button1.innerHTML = "Select School";
+        
 
         var body = document.getElementsByTagName("body")
         body.appendChild(button1);
