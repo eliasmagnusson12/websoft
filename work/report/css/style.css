@@ -93,7 +93,7 @@ body {
   background-color: #f8de1f;
 }
 
-.france .part1 {
+.belg .part1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -102,7 +102,7 @@ body {
   background-color: #333;
 }
 
-.france .part2 {
+.belg .part2 {
   position: absolute;
   top: 0;
   left: 200px;
