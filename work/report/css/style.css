@@ -48,7 +48,7 @@ body {
 
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 400ms, opacity 400ms;
+  transition: visibility 0s linear 500ms, opacity 500ms;
 
 }
 
