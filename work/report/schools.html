@@ -33,18 +33,13 @@
     <p>Lets fetch some Schools!</p>
 </div>
 
-<script language="javascript">
-    function jumpto(x){
     
-    if (document.form2.jumpmenu.value != "null") {
-        document.location.href = x
-        }
-    }
-    </script>
+    
+    
 
 <form name="form2">
     <select name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
-    <option>Jump to...</option>
+    <option>Choose municipality...</option>
     <option value=https://www.quackit.com>Quackit Homepage</option>
     <option value=https://www.quackit.com/javascript/>JavaScript</option>
     <option value=https://www.quackit.com/html/>HTML</option>
@@ -56,7 +51,7 @@
     </form>
 
 <div id="container"></div>
-<script type="text/javascript" src="js/fetchSchools.js"></script> 
+<script type="text/javascript" src="js/fetchSchools.js"></script>  
 <div id="duck" class="duck"></div>
 <script type="text/javascript" src="js/duck.js"></script> 
 

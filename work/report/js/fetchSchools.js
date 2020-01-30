@@ -5,6 +5,14 @@
     var myList = [];
 
 
+    function jumpto(x){
+    
+        if (document.form2.jumpmenu.value != "null") {
+            document.location.href = x
+            }
+        }
+
+
 //fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282')
     fetch('data/1081.json')
         .then((response) => {
