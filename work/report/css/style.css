@@ -111,8 +111,10 @@ body {
   background-color: #ED2939;
 }
 
-
-.dropbtn {
+  body{
+    padding: 20px;
+  }
+  .dropbtn{
   background-color: #3498DB;
   color: white;
   padding: 16px;

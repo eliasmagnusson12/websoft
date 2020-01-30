@@ -52,7 +52,7 @@
         });  
 
         
-        var button1 = getElementsByTagName("dropbtn");
+        var button1 = getElementById("dropbtn");
         button1.innerHTML = "Select School";
 
         var body = document.getElementsByTagName("body")
