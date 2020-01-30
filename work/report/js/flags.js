@@ -12,7 +12,7 @@
     function drawFlagElfenbenskusten()  {
         var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +
         '<div class="part2"></div></div>';
-
+        flagElfenbenskusten.innerHTML = "Click here to hide/show the flag"
         console.log("Drawing flag");
         flagTarget.innerHTML = flagElfenbenskusten;
     }
@@ -20,7 +20,7 @@
     function drawFlagFrance()  {
         var flagFrance = '<div class="flag france"><div class="part1"></div>' +
         '<div class="part2"></div></div>';
-
+        flagFrance.innerHTML = "Click here to hide/show the flag"
         console.log("Drawing flag");
         flagTarget.innerHTML = flagFrance;
     }
@@ -28,7 +28,7 @@
     function drawFlagBelg()  {
         var flagBelg = '<div class="flag belg"><div class="part1"></div>' +
         '<div class="part2"></div></div>';
-
+        flagBelg.innerHTML = "Click here to hide/show the flag"
         console.log("Drawing flag");
         flagTarget.innerHTML = flagBelg;
     }
