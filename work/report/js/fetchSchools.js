@@ -68,7 +68,7 @@ function jumpto(x){
 
         // 3. Add event handler
         button.addEventListener ("click", function() {
-            if(!document.getElementById("container").contains(myList)){
+            if(document.getElementById("container") === 'undefined'){
             document.getElementById("container").appendChild(generateTable(myList)); 
         }else{
 
