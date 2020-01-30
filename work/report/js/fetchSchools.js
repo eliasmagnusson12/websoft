@@ -61,7 +61,7 @@ fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282')
         });
         
         
-        function myFunction() {
+function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
