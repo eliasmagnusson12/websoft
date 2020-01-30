@@ -53,7 +53,10 @@ fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282')
 
         
         var button1 = getElementById('dropbtn');
-        button.innerHTML = "Select School";
+        button1.innerHTML = "Select School";
+
+        var body = document.getElementsByTagName("body")
+        body.appendChild(button1);
 
         button1.addEventListener ("click", function() {
             myFunction();
