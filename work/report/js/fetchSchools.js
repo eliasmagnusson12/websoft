@@ -1,3 +1,11 @@
+
+function jumpto(x){
+    
+    if (document.form2.jumpmenu.value != "null") {
+        document.location.href = x
+        }
+    }
+
 (function () {
     'use strict';
 
@@ -5,12 +13,7 @@
     var myList = [];
 
 
-    function jumpto(x){
     
-        if (document.form2.jumpmenu.value != "null") {
-            document.location.href = x
-            }
-        }
 
         
 
