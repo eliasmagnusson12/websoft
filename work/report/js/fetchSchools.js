@@ -1,4 +1,6 @@
 
+var myList = [];
+
 function jumpto(x){
     
     if (myList < 1) {
@@ -91,7 +93,7 @@ function jumpto(x){
     'use strict';
 
     
-    var myList = [];
+    
 
 
         // 1. Create the button
