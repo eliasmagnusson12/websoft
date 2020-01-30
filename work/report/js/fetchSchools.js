@@ -54,10 +54,6 @@
         
         var button1 = document.getElementById("dropbtn");
         
-
-        var body = document.getElementsByTagName("body")
-        body.appendChild(button1);
-
         button1.addEventListener ("click", function() {
             myFunction();
         
