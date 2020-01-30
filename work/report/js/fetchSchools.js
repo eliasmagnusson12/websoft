@@ -68,7 +68,15 @@ function jumpto(x){
 
         // 3. Add event handler
         button.addEventListener ("click", function() {
+            if(!document.getElementById("container").contains(myList)){
             document.getElementById("container").appendChild(generateTable(myList)); 
+        }else{
+
+            document.getElementById("container") = "";
+            document.getElementById("container").appendChild(generateTable(myList)); 
+
+        }
+            
         //alert("did something");
         });
 
