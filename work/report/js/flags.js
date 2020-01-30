@@ -41,19 +41,19 @@
     flagLinkElf.addEventListener("click", function () {
         
         drawFlagElfenbenskusten();
-        flagTarget.classList.toggle("m-fadeIn")
+        
     });
 
     flagLinkFrance.addEventListener("click", function () {
         
         drawFlagFrance();
-        flagTarget.classList.toggle("m-fadeIn")
+        
     });
 
     flagLinkBelg.addEventListener("click", function () {
         
         drawFlagBelg();
-        flagTarget.classList.toggle("m-fadeIn")
+        
     });
 
 
