@@ -10,7 +10,7 @@
     //myContent.innerHTML = '<h3>This is a MEGA template!</h3>';
 
     function drawFlagElfenbenskusten()  {
-        var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="m-fadeIn"></div><div class="part1"></div>' +
+        var flagElfenbenskusten = '<div class="flag elfenbenskusten"><div class="part1"></div>' +
         '<div class="part2"></div></div>';
 
         console.log("Drawing flag");
@@ -34,23 +34,26 @@
     }
 
     flagTarget.addEventListener("click", function (){
-        flagTarget.style.visibility='hidden'
+        flagTarget.classList.toggle("m-fadeOut")
         console.log("Hello")
     });
 
     flagLinkElf.addEventListener("click", function () {
-        flagTarget.style.visibility='visible'
+        
         drawFlagElfenbenskusten();
+        flagTarget.classList.toggle("m-fadeIn")
     });
 
     flagLinkFrance.addEventListener("click", function () {
-        flagTarget.style.visibility='visible'
+        
         drawFlagFrance();
+        flagTarget.classList.toggle("m-fadeIn")
     });
 
     flagLinkBelg.addEventListener("click", function () {
-        flagTarget.style.visibility='visible'
+        
         drawFlagBelg();
+        flagTarget.classList.toggle("m-fadeIn")
     });
 
 

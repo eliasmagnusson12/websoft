@@ -48,14 +48,14 @@ body {
 
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 300ms, opacity 300ms;
+  transition: visibility 0s linear 400ms, opacity 400ms;
 
 }
 
 .m-fadeIn {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s linear 0s, opacity 300ms;
+  transition: visibility 0s linear 0s, opacity 400ms;
 }
 
 
