@@ -1,0 +1,129 @@
+/*
+ * Comments are written as C++ style. 
+ */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    background: #fff;
+    width: 700px;
+}
+
+.duck{
+width: 60px;
+height: 60px;
+background-image: url("../img/duck.png");
+background-size: 60px;
+position: absolute;
+top: 100px;
+left: 40px;
+
+}
+
+body {
+    padding: 20px;
+  }
+  button {
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 40px;
+    background: salmon;
+    border: none;
+  }
+  button:hover {
+    background: lightsalmon;
+  }
+
+  .flag {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.m-fadeOut{
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 500s linear 500ms, opacity 500ms;
+
+}
+
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+.elfenbenskusten {
+    background-color: #fff;
+}
+
+.elfenbenskusten .part1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 200px;
+    background-color: #f77f00;
+}
+
+.elfenbenskusten .part2 {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 100px;
+    height: 200px;
+    background-color: #009e60;
+}
+
+
+.france {
+  background-color: #fff;
+}
+
+.france .part1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  background-color: #002395;
+}
+
+.france .part2 {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 100px;
+  height: 200px;
+  background-color: #ED2939;
+}
+
+.belg {
+  background-color: #f8de1f;
+}
+
+.belg .part1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  background-color: #333;
+}
+
+.belg .part2 {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 100px;
+  height: 200px;
+  background-color: #ED2939;
+}
+
+

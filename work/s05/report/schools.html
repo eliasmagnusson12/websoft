@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+    
+    <script type="text/javascript" src="js/fetchSchools.js"></script> 
+
+<head>
+    <meta charset="utf-8">
+    <title>Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+
+<header>
+    <nav>
+      <a href="me.html">Me</a> |
+      <a href="report.html">Report</a> | 
+      <a href="about.html">About</a> |
+      <a href="duck.html">Moving duck</a> |
+      <a href="schools.html">Fetch Shcools</a> |
+      <a href="flag.html">Draw a flag</a> |
+      <a href="work\s04\a04\nodejs\express\public\lotto.html">Lotto</a> |
+    </nav>
+</header>
+
+
+
+
+<body>
+<h1>Schools</h1>
+
+<div id="content">
+    <p>Lets fetch some Schools!</p>
+</div>
+
+    
+
+
+<form name="form2">
+    <select name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
+    <option>Choose municipality...</option>
+    <option value='https://cors-anywhere.herokuapp.com/https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282'>Landskrona</option>
+    <option value='https://cors-anywhere.herokuapp.com/https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1281',>Lund</option>
+    <option value='https://cors-anywhere.herokuapp.com/https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1290',>Kristianstad</option>
+    </select>
+    </form>
+
+    
+
+
+
+<div id="container"></div>
+<script type="text/javascript" src="js/fetchSchools.js">jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value);</script> 
+<div id="duck" class="duck"></div>
+<script type="text/javascript" src="js/duck.js"></script> 
+
+</body>
+</html>
