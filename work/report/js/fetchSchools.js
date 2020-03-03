@@ -94,9 +94,6 @@ function jumpto(x){
     'use strict';
 
     
-    
-
-
         // 1. Create the button
         var button = document.createElement("button");
         button.innerHTML = "Fetch Schools";
