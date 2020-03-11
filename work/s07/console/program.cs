@@ -1,57 +1,92 @@
 using System;
 using System.IO;
 using System.Text.Json;
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using System.Collections.Generic ;
 
-namespace accountApplication
+namespace console
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            var accounts = readData();
-            bool appIsRunning = true;
-            Console.Clear();
+           bool boolean = true;
 
-            while(appIsRunning){
-                appIsRunning = showMenu(accounts);
+            while (boolean){
+
+                    boolean = menu();
+
             }
 
-        }
-
-        private static bool showMenu(IEnumerable<Account> accounts){
+        
             
-            Console.WriteLine("\n+----- Account Handler -----+");
-            Console.WriteLine("| 1. View accounts          |");
-            Console.WriteLine("| 2. View account by number |");
-            Console.WriteLine("| 3. Exit                   |");
-            Console.WriteLine("+---------------------------+");
+        }
+        private static bool menu()
+        {
+            var accounts = ReadAccounts();    
 
-            Console.Write("Enter choice >> ");
-            switch (Console.ReadLine()){
+            
+            Console.WriteLine("------Options------");
+            Console.WriteLine("1) View Accounts");
+            Console.WriteLine("2) View Account By Number");
+            Console.WriteLine("3) Exit");
+            
+            switch (Console.ReadLine())
+            {
                 case "1":
-                    viewAccounts(accounts);
-                    return true;
-                case "2":
-                    viewAccountById(accounts);
-                    return true;
-                case "3":
-                    return false;
-                default:
-                    return true;
+
+                Console.WriteLine("+--------+---------+-----------+-------+");
+                Console.WriteLine("| Number | Balance |   Label   | Owner |");
+                Console.WriteLine("+--------+---------+-----------+-------+");
+
+                foreach (var account in accounts) {
+                
+                Console.Write("| "); Console.Write(account.Number); Console.Write(" |   "); Console.Write(account.Balance); Console.Write("    |   "); Console.Write(account.Label); Console.Write("  |   ");Console.Write(account.Owner);Console.WriteLine("  |");
+                Console.WriteLine("+--------+---------+-----------+-------+");
             }
+                return true;
+                
+
+                case "2":
+                
+                Console.WriteLine("Search number:");
+                var search = Console.ReadLine();
+
+                foreach (var account in accounts) {
+                        
+                    if ( account.Number == Int32.Parse(search) ){
+                        Console.WriteLine("+--------+---------+-----------+-------+");
+                        Console.WriteLine("| Number | Balance |   Label   | Owner |");
+                        Console.WriteLine("+--------+---------+-----------+-------+");
+                        Console.Write("| "); Console.Write(account.Number); Console.Write(" |   ");
+                         Console.Write(account.Balance); Console.Write("    |   "); 
+                         Console.Write(account.Label); Console.Write("  |   ");
+                         Console.Write(account.Owner);Console.WriteLine("  |");
+                        Console.WriteLine("+--------+---------+-----------+-------+");
+                    }
+            }    
+                return true;
+                case "3":
+                return false;
+                default:
+                    Console.WriteLine("Please enter a proper number");
+
+                return true;
+            }
+
+
+
+
         }
 
-        public static Account[] readData(){
-
-
+        static IEnumerable<Account> ReadAccounts()
+        {
             String file = "../data/account.json";
 
             using (StreamReader r = new StreamReader(file))
             {
                 string data = r.ReadToEnd();
+                // Console.WriteLine(data);
 
                 var json = JsonSerializer.Deserialize<Account[]>(
                     data,
@@ -60,94 +95,14 @@ namespace accountApplication
                     }
                 );
 
+                //Console.WriteLine(json[0]);
                 return json;
             }
         }
 
-        public static void viewAccounts(IEnumerable<Account> accounts){
 
-            Console.WriteLine("\n+---------- View Accounts -----------+");
-            Console.WriteLine("| Number | Balance |  Label  | Owner |");
-            Console.WriteLine("|------------------------------------|");
-            
-            foreach (Account account in accounts){
-                Console.WriteLine(buildAccountString(account));
-            }
-            Console.WriteLine("+------------------------------------+");
-            
-        }
 
-        public static void viewAccountById(IEnumerable<Account> accounts){
-
-            if (accounts == null){
-                Console.WriteLine("You have to view all accounts first.");
-                return;
-            }
-
-            Console.Write("Enter the account number to view >> ");
-            var accountNumber = Console.ReadLine();
-            Console.WriteLine("\n+----------- View Account -----------+");
-            Console.WriteLine("| Number | Balance |  Label  | Owner |");
-            Console.WriteLine("|------------------------------------|");
-
-            foreach (Account account in accounts){
-                if (accountNumber == account.Number.ToString()){
-                    Console.WriteLine(buildAccountString(account));
-                    break;
-                }
-            }
-            Console.WriteLine("+------------------------------------+");
-              
-        }
-        
-
-        public static String buildAccountString(Account account){
-            String accountString = "";
-            String number = "";
-            String balance = "";
-            String label = "";
-            String owner = "";
-
-            number = "| " + account.Number;
-            if(number.Length < 9){
-                String append = new String(' ', 9 - number.Length);
-                number += append + "|";
-            }else {
-                number += "|";
-            }
-
-            balance = " " + account.Balance;
-            if (balance.Length < 9){
-                String append = new String(' ', 9 - balance.Length);
-                balance += append + "|";
-            }else {
-                balance += "|";
-            }
-
-            label = " " + account.Label;
-            if (label.Length < 9){
-                String append = new String(' ', 9 - label.Length);
-                label += append + "|";
-            }else {
-                label += "|";
-            }
-
-            owner = " " + account.Owner;
-            if (owner.Length < 8){
-                String append = new String(' ', 7 - owner.Length);
-                owner += append + "|";
-            }else {
-                owner += "|";
-            }
-
-            accountString = number + balance + label + owner;
-            return accountString;
-
-        }
-    
-    }
-
-    public class Account
+        public class Account
     {
         public int Number { get; set; }
         public int Balance { get; set; }
@@ -157,5 +112,10 @@ namespace accountApplication
         public override string ToString() {
             return JsonSerializer.Serialize<Account>(this);
         }
+    }
+
+
+
+
     }
 }
