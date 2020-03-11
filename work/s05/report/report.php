@@ -11,7 +11,7 @@
 
 
 
-<?php require __DIR__ . "/view/header"
+<?php require __DIR__ . "/view/header.php"?>
 
 
 
@@ -87,7 +87,7 @@
 <p>Here is the text for this section.</p>
 </section>
 
-<?php require __DIR__ . "/view/footer"
+<?php require __DIR__ . "/view/footer.php"?>
 
 </article>
 

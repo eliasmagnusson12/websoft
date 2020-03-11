@@ -14,7 +14,7 @@ Comments are written as HTML style.
 -->
 
 
-<?php require __DIR__ . "/view/header"
+<?php require __DIR__ . "/view/header.php";?>
 
 
 
@@ -40,7 +40,7 @@ Comments are written as HTML style.
 
 </article>
 
-<?php require __DIR__ . "/view/footer"
+<?php require __DIR__ . "/view/footer.php"?>
 
 
 

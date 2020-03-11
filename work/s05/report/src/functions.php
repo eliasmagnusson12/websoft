@@ -12,8 +12,7 @@ function connectDatabase(array $dsn)
     try {
         $db = new PDO(
             $dsn["dsn"],
-            $dsn["username"],
-            $dsn["password"]
+            $dsn["username"]
         );
 
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

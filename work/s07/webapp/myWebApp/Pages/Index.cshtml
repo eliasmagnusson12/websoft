@@ -11,5 +11,6 @@
 
 @foreach (var account in Model.Accounts)
 {
+    var data = "api/accounts/" + account.Number;
     <h2>@account.Label</h2>
 }

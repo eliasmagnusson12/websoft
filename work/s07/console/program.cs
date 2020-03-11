@@ -26,9 +26,7 @@ namespace accountApplication
             Console.WriteLine("\n+----- Account Handler -----+");
             Console.WriteLine("| 1. View accounts          |");
             Console.WriteLine("| 2. View account by number |");
-            Console.WriteLine("| 3. Search                 |");
-            Console.WriteLine("| 4. Move                   |");
-            Console.WriteLine("| 5. Exit                   |");
+            Console.WriteLine("| 3. Exit                   |");
             Console.WriteLine("+---------------------------+");
 
             Console.Write("Enter choice >> ");
@@ -40,12 +38,6 @@ namespace accountApplication
                     viewAccountById(accounts);
                     return true;
                 case "3":
-                    searchAccount(accounts);
-                    return true;
-                case "4":
-                    moveMoney(accounts);
-                    return true;
-                case "5":
                     return false;
                 default:
                     return true;
@@ -106,97 +98,6 @@ namespace accountApplication
             }
             Console.WriteLine("+------------------------------------+");
               
-        }
-
-        public static void searchAccount(IEnumerable<Account> accounts){
-            
-            if (accounts == null){
-                Console.WriteLine("You have to view all accounts first.");
-                return;
-            }
-            
-            Console.Write("Enter the string to search for >> ");
-            var searchString = Console.ReadLine();
-
-            Console.WriteLine("\n+---------- Search Account ----------+");
-            Console.WriteLine("| Number | Balance |  Label  | Owner |");
-            Console.WriteLine("|------------------------------------|");
-
-            foreach (Account account in accounts){
-                if(account.Number.ToString().Equals(searchString)){
-                    Console.WriteLine(buildAccountString(account));
-                    continue;
-                }
-                if(account.Label.Contains(searchString)){
-                    Console.WriteLine(buildAccountString(account));
-                    continue;
-                }
-                if (account.Owner.ToString().Equals(searchString)){
-                    Console.WriteLine(buildAccountString(account));
-                    continue;
-                }
-            }
-
-            Console.WriteLine("+------------------------------------+");
-
-        }
-
-        public static void moveMoney(IEnumerable<Account> accounts){
-
-            if (accounts == null){
-                Console.WriteLine("You have to view all accounts first.");
-                return;
-            }
-
-            bool movedMoney = false;
-
-            Console.Write("From which account do you want to move money >> ");
-            var moveAccountNumber = Console.ReadLine();
-
-            Console.Write("To which account do you want to move money >> ");
-            var targetAccountNumber = Console.ReadLine();
-
-            Console.Write("How much would you like to move >> ");
-            var amount = Console.ReadLine();
-
-            foreach(Account account in accounts) {
-                if (account.Number.ToString().Equals(moveAccountNumber)){
-                    if(Int32.Parse(amount) <= account.Balance){
-                    account.Balance -= Int32.Parse(amount);
-                    movedMoney = true;
-                    }else {
-                        Console.WriteLine("Entered amount exceeds the accounts amount.");
-                        break;
-                    }
-                }
-            }
-
-            if(movedMoney){
-                foreach(Account account in accounts) {
-                    if (account.Number.ToString().Equals(targetAccountNumber)){
-                        account.Balance += Int32.Parse(amount);
-                    }
-                }
-                saveData(accounts);
-            }
-        }
-
-        public static void saveData(IEnumerable<Account> accounts){
-            String file = "../data/account.json";
-
-            using (var outputStream = File.Open(file, FileMode.Create))
-            {
-                JsonSerializer.Serialize<IEnumerable<Account>>(
-                    new Utf8JsonWriter (
-                        outputStream,
-                        new JsonWriterOptions {
-                            SkipValidation = true,
-                            Indented = true
-                        }
-                    ),
-                    accounts
-                );
-            }
         }
         
 

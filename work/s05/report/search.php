@@ -2,7 +2,7 @@
 /**
  * A page controller
  */
-require __DIR__ . "/view/header"
+require __DIR__ . "/view/header.php";
 require "config.php";
 require "src/functions.php";
 
@@ -49,6 +49,7 @@ EOD;
 <?php if ($search) : ?>
     <table>
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Type</th>
         </tr>
@@ -64,4 +65,4 @@ EOD;
     </table>
 <?php endif; ?>
 
-<?php require __DIR__ . "/view/footer"
+<?php require __DIR__ . "/view/footer.php";

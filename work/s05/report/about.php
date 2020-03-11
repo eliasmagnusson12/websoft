@@ -11,7 +11,7 @@
 
 
 
-<?php require __DIR__ . "/view/header"
+<?php require __DIR__ . "/view/header.php"?>
 
 
 
@@ -29,7 +29,7 @@
 
 </article>
 
-<?php require __DIR__ . "/view/footer"
+<?php require __DIR__ . "/view/footer.php"?>
 
 <script type="text/javascript" src="js/main.js"></script>
 <div id="duck" class="duck"></div>

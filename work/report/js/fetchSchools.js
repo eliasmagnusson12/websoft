@@ -14,7 +14,7 @@ function jumpto(x){
         
         console.log(myJson.Skolenheter.length)
         
-        var str1 = "Skolenhetsnamn";
+        var str1 = "Skolenhetskod";
         var str2 = "Skolenhetsnamn";
         var str3 = "Kommunkod";
         var str4 = "PeOrgNr";
@@ -55,7 +55,7 @@ function jumpto(x){
         
         console.log(myJson.Skolenheter.length)
         
-        var str1 = "Skolenhetsnamn";
+        var str1 = "Skolenhetskod";
         var str2 = "Skolenhetsnamn";
         var str3 = "Kommunkod";
         var str4 = "PeOrgNr";
@@ -69,6 +69,7 @@ function jumpto(x){
         myList.push(str2)
         myList.push(str3)
         myList.push(str4)
+        
         for(var i=0; i < myJson.Skolenheter.length; i++){
 
         var item = myJson.Skolenheter[i];

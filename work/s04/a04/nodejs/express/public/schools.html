@@ -7,20 +7,24 @@
 <head>
     <meta charset="utf-8">
     <title>Schools</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
     <link rel="icon" href="favicon.ico">
 </head>
 
 
 <header>
     <nav>
-        <a href="../../../../../report/me.html">Me</a> |
-          <a href="../../../../../report/report.html">Report</a> | 
-          <a href="../../../../../report/about.html">About</a> |
-          <a href="../../../../../report/duck.html">Moving duck</a> |
-          <a href="../../../../../report/schools.html">Fetch Shcools</a> |
-          <a href="../../../../../report/flag.html">Draw a flag</a> |
-          <a href="lotto.html">Lotto</a> |
+        <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="me.html">Me</a></li> 
+        <li><a href="report.html">Report</a></li>  
+        <li><a href="about.html">About</a></li> 
+        <li><a href="duck.html">Moving duck</a></li> 
+        <li><a href="schools.html">Fetch Shcools</a></li> 
+        <li><a href="flag.html">Draw a flag</a></li> 
+        <li><a href="lotto.html">Lotto</a></li> 
+    </ul>
+    </div>
     </nav>
 </header>
 
@@ -38,7 +42,7 @@
 
 
 <form name="form2">
-    <select name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
+    <select class="browser-default" name="jumpmenu" onChange="jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value)">
     <option>Choose municipality...</option>
     <option value='https://cors-anywhere.herokuapp.com/https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1282'>Landskrona</option>
     <option value='https://cors-anywhere.herokuapp.com/https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1281',>Lund</option>
@@ -51,7 +55,7 @@
 
 
 <div id="container"></div>
-<script type="text/javascript" src="js/fetchSchools.js">jumpto(document.form2.jumpmenu.options[document.form2.jumpmenu.options.selectedIndex].value);</script> 
+<script type="text/javascript" src="js/fetchSchools.js"></script> 
 <div id="duck" class="duck"></div>
 <script type="text/javascript" src="js/duck.js"></script> 
 
